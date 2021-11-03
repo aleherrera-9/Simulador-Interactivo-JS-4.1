@@ -4,6 +4,7 @@ const priceCap = 600;
 let hoddieQty = 0;
 let tshirtQty = 0;
 let capQty = 0;
+
 function options() {
     let menu = prompt("Bieveni@ a IBASHO, ingresa una opcion del menu:"
         + "\n 1-Comprar productos"
@@ -24,9 +25,17 @@ function options() {
             alert("la opcion ingresada no es la correcta");
     }
 }
-//agrega la cantidad deseada
+//agrega la cantidad deseada y con un for el color de los items
 function add() {
     qty = parseInt(prompt("Ingrese la cantidad deseada del producto"));
+    
+    for(let i=1;i<=qty;i++){
+        color=prompt("Ingresa una color para el item "+i
+        + "\n 1-violeta"
+        + "\n 2-celeste"
+        + "\n 3-naranja"
+    );
+    }
     return qty;
 }
 //selecciona el producto y llama a add para agregar la cantidad
@@ -117,4 +126,3 @@ function shipment() {
 }
 
 options();
-
